@@ -1,26 +1,17 @@
-//
-//  ContentView.swift
-//  myfridgeapp
-//
-//  Created by Sohom Bhattacharya on 7/16/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            MainView()
+                .navigationTitle("Fridge Inventory")
+                .toolbar {
+                    ToolbarItem() {
+                        NavigationLink(destination: AddView()) {
+                            Image(systemName: "plus")
+                        }
+                    }
+                }
         }
-        .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
