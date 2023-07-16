@@ -11,6 +11,9 @@
 		4F9B41262A648B370012E790 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9B41252A648B370012E790 /* ContentView.swift */; };
 		4F9B41282A648B380012E790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9B41272A648B380012E790 /* Assets.xcassets */; };
 		4F9B412C2A648B380012E790 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9B412B2A648B380012E790 /* Preview Assets.xcassets */; };
+		4F9B41332A64921F0012E790 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9B41322A64921F0012E790 /* AddView.swift */; };
+		4F9B41352A6492510012E790 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9B41342A6492510012E790 /* MainView.swift */; };
+		4F9B41392A6499760012E790 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9B41382A6499760012E790 /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,10 @@
 		4F9B41272A648B380012E790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F9B41292A648B380012E790 /* myfridgeapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myfridgeapp.entitlements; sourceTree = "<group>"; };
 		4F9B412B2A648B380012E790 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F9B41322A64921F0012E790 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		4F9B41342A6492510012E790 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4F9B41382A6499760012E790 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		4F9B41552A649DB20012E790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +59,15 @@
 		4F9B41222A648B370012E790 /* myfridgeapp */ = {
 			isa = PBXGroup;
 			children = (
+				4F9B41552A649DB20012E790 /* Info.plist */,
+				4F9B41322A64921F0012E790 /* AddView.swift */,
 				4F9B41232A648B370012E790 /* myfridgeappApp.swift */,
 				4F9B41252A648B370012E790 /* ContentView.swift */,
 				4F9B41272A648B380012E790 /* Assets.xcassets */,
 				4F9B41292A648B380012E790 /* myfridgeapp.entitlements */,
 				4F9B412A2A648B380012E790 /* Preview Content */,
+				4F9B41342A6492510012E790 /* MainView.swift */,
+				4F9B41382A6499760012E790 /* ImagePickerView.swift */,
 			);
 			path = myfridgeapp;
 			sourceTree = "<group>";
@@ -140,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9B41262A648B370012E790 /* ContentView.swift in Sources */,
+				4F9B41352A6492510012E790 /* MainView.swift in Sources */,
 				4F9B41242A648B370012E790 /* myfridgeappApp.swift in Sources */,
+				4F9B41332A64921F0012E790 /* AddView.swift in Sources */,
+				4F9B41392A6499760012E790 /* ImagePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +283,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myfridgeapp/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -278,16 +294,19 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = myfridge.myfridgeapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +326,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myfridgeapp/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -316,16 +337,19 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = myfridge.myfridgeapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
